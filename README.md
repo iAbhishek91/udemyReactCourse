@@ -82,6 +82,9 @@ other module requires that.
 returns JSX.
 * this component do not have state
 management capabilities.
+* but it can call handler if it is
+passed from container component as 
+refererence.
 * react should be imported in the
 file where these are written.
 * props are passed as a argument and 
@@ -107,3 +110,48 @@ inside single curly braces.
 4. naming convention of argument in 
 functional component should be as
 'props'
+
+#### state
+* state is managed from inside a
+component.
+* when a state changes it re-renders
+the DOM.
+* state property cant be mutated
+directly
+(react/no-direct-mutation-state),
+instead it should be changed
+using setState() method.
+* setState() method is defined by 
+React API and can be called using
+this.setState().
+* setState() takes an object and merge
+with the exiting state object.
+
+#### props
+* props is managed from outside a component.
+* when a prop changes it also re-renders the DOM.
+* props allow you to pass value/function from 
+parent to child(embedded) component.
+
+#### even handler
+* react supported events are 
+https://reactjs.org/docs/events.html#supported-events
+* event handler method should end with
+a name Handler. eg
+`switchNameHandler`. This is to
+identify that this function is not
+called intentionally from the code,
+but called by a event handler.
+
+#### DOM Elements
+* most used event handler in HTML or
+normal java script is onclick(),
+however, in React it is renamed as
+'onClick()'.
+is 
+* only pass a reference of the 
+function and dont use bracket in the
+attribute. bracket will execute the 
+function as soon as component is
+rendered. eg use {this.fucntionName}
+instead of {this.functionName()}
