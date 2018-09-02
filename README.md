@@ -15,7 +15,7 @@ react redux with es6 and unit testing
 2. `yarn start`
 > note: build tools(eslint, babel and webpack etc) are configured in `react-script` module.
 
-## my documentation
+## my documentation - React library
 React provides few API to create application. These are set of tools to be used for creating a react app
 ### React
 > refer: https://reactjs.org/docs/react-api.html
@@ -56,3 +56,54 @@ React provides few API to create application. These are set of tools to be used 
 > refer: https://reactjs.org/docs/react-dom-server.html
 ### DOM Elementes
 > refer: https://reactjs.org/docs/dom-elements.html
+
+
+## Notes:
+### React:
+react is basically a library which
+allow us to create a hierarchy of
+components keeping root as App.
+#### general structure of react app:
+1. there will be an HTML with an id where
+the entire app is rendered.
+2. index.js generally loads the entire
+app into the html using ReactDOM.render()
+method. 
+> Note: ReactDOM API is used only in this
+part of the application.
+3. app.js combines all the component that
+is required by the app.
+4. the component should be exported if
+other module requires that.
+
+#### type of components:
+1. functional(stateless) component:
+* this are simple function which
+returns JSX.
+* this component do not have state
+management capabilities.
+* react should be imported in the
+file where these are written.
+* props are passed as a argument and 
+can be accessed as 'props.<attributeName>'
+2. class-based(container/stateful) component:
+* these are class which extends
+Componets obj from React API.
+* these can contain functional
+components and hence called as 
+container components.
+* props are assessed using 'this.props.<attributeName>'
+
+#### general component do's:
+1. every(any type of) component should
+have a return statement, which returns
+a JSX.
+2. every component name, file name,
+folder name should start with capital
+letter to indicate that it contains
+react components
+3. dynamic content should be wrapped
+inside single curly braces.
+4. naming convention of argument in 
+functional component should be as
+'props'
